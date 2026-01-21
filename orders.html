@@ -35,7 +35,7 @@ body {
 <script>
 async function loadOrders() {
   try {
-    const res = await fetch("/orders");
+    const res = await fetch("/api/orders");
     const orders = await res.json();
 
     const container = document.getElementById("ordersContainer");

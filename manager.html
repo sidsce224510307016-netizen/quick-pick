@@ -34,7 +34,7 @@ body {
 
 <script>
 async function loadManagerData() {
-  const res = await fetch("/manager-data");
+  const res = await fetch("/api/manager-data");
   const data = await res.json();
 
   const tablesDiv = document.getElementById("tables");
@@ -89,7 +89,7 @@ async function loadManagerData() {
 }
 
 function freeTable(tableNumber) {
-  fetch("/free-table", {
+  fetch("/api/free-table", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ tableNumber })

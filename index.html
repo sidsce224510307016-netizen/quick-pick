@@ -152,7 +152,7 @@ function placeOrder() { {
 
   console.log("Sending payload:", payload); // DEBUG
 
-  fetch("/order", {
+  fetch("/api/order", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload)
@@ -173,7 +173,7 @@ function placeOrder() { {
 }
 
 
-  fetch("/order",{
+  fetch("/api/order",{
     method:"POST",
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({
